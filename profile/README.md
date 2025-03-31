@@ -1,4 +1,4 @@
-LG CNS AM Inspire Camp 1기 미니프로젝트2 4조
+<h1>LG CNS AM Inspire Camp 1기 미니프로젝트2 4조</h1>
 
 ## 📍 팀 이름: Ix4
 
