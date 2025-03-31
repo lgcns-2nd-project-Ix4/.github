@@ -44,6 +44,7 @@ LG CNS AM Inspire Camp 1기 미니프로젝트2 4조
 
 - 컨테이너
 <img src="https://img.shields.io/badge/amazonecs-FF9900?style=for-the-badge&logo=amazonecs&logoColor=white">
+<img src="https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white">
 
 - 이미지 레지스트리
 
