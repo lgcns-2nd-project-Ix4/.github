@@ -49,3 +49,7 @@ LG CNS AM Inspire Camp 1기 미니프로젝트2 4조
 - 이미지 레지스트리
 
 - CI/CD
+
+<img src="https://img.shields.io/badge/jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white">
+
+
