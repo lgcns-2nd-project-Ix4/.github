@@ -1,8 +1,90 @@
-## 📍 팀 이름: Ix4
-LG CNS AM Inspire Camp 1기 미니프로젝트2 4조
+## 🚀 [2025] 레거시 시스템의 MSA 전환 및 클라우드 마이그레이션
+React, 모로리식 방식의 Spring Boot, Django 시스템에 Spring Cloud를 적용하고 Jenkins Pipeline을 적용하여 탄력성과 운영 용이성을 고려한 아키텍처로의 전환을 진행한 프로젝트입니다.
 <br />
 <br />
 
+🔗[원본 프로젝트](https://github.com/lgcns-mini-project1-group5/cryptory)
+에서 전환 이전의 프로젝트를 확인할 수 있습니다.
+
+## 아키텍처 비교
+### 🏗️ AS-IS
+![변환 후 아키텍처](https://github.com/user-attachments/assets/64e65576-9540-444a-a1ee-01bec1f10cd7)
+
+### 🏢 TO-BE
+![변환 후 아키텍처](https://github.com/user-attachments/assets/3d21f106-e925-4a62-b9fe-6a389fd37dd8)
+
+## 🔄️전환 방법
+### 📌 레거시 프로젝트 분석
+
+1️⃣ 데이터 ERD 및 기능 명세서를 바탕으로 기존 프로그램 분석 <br>
+2️⃣ 마이크로서비스 전환 대상 서비스 식별 및 분리 &rarr; ( User 서비스, Coin 서비스 ) <br>
+
+---
+### 🛠️ Jenkins 기반의 CI/CD 적용
+🔐 보안 관리
+* 민감 정보: Jenkins Credentials 사용
+* 환경 변수: Environment Variables로 관리
+
+📦 CI/CD 과정 <br>
+1️⃣ 소스코드 checkout <br>
+2️⃣ Dockerfile 기반 이미지 생성 <br>
+3️⃣ Amazon ECR로 이미지 업로드 <br>
+4️⃣ 배포 단계 <br>
+* EC2 배포: `(by sshPublisher)`
+* ECS 배포
+  *  🗒️ Task Definition 정의
+  *  🚀 ECS 배포 실행<br>
+
+5️⃣ 최종 파이프라인을 Github으로 버전관리 <br>
+6️⃣ Github webhook을 설정 <br>
+
+---
+
+### ☁️ 클라우드 아키텍처 구성
+💻 EC2
+
+* 🛠️ Jenkins (CI/CD 자동화)
+
+💻 EC2 (Spring Cloud 인프라)
+
+* 🔍 Eureka (서비스 디스커버리)
+
+* ⚙️ Config Server (설정 중앙 관리)
+
+* 🚪 Gateway Server (API Gateway 및 로드 밸런싱)
+
+* 📩 RabbitMQ (비동기 메시지 큐)
+
+📦 ECS (Docker 기반 서비스 배포)
+
+* 🏦 Coin-Service (Spring Boot)
+
+* 👤 User-Service (Spring Boot)
+
+* 🐍 Django (백엔드 서비스)
+
+📂 ECR (Docker 컨테이너 이미지 저장소)
+
+🖥️ React 배포
+
+* 🗂️ S3 (정적 웹 호스팅)
+
+* ⚡ CloudFront (CDN 기반 속도 최적화 및 캐싱)
+
+---
+
+### 🌿 Spring Cloud 적용용 
+🚀 Spring Cloud Eureka <br>
+* 서비스 등록, 등록된 서비스의 조회
+* 분산 투명성 제공
+
+🚪 Spring Cloud Gateway <br>
+* 단일 진입지점, 로드 밸런싱 제공
+* 분산 투명성 제공
+
+📜 Spring Cloud Config <br>
+* Git private Repository에서 설정파일 관리
+* Git webhook과 연동한 Cloud Bus refresh
 
 ## 👩‍💻 팀원
 <table>
