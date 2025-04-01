@@ -7,11 +7,11 @@ React, 모로리식 방식의 Spring Boot, Django 시스템에 Spring Cloud를 �
 에서 전환 이전의 프로젝트를 확인할 수 있습니다.
 
 ## 아키텍처 비교
-### 🏗️ AS-IS
-![변환 후 아키텍처](https://github.com/user-attachments/assets/64e65576-9540-444a-a1ee-01bec1f10cd7)
+|🏗️ AS-IS| 🏢 TO-BE|
+---|---|
+|<img src="https://github.com/user-attachments/assets/64e65576-9540-444a-a1ee-01bec1f10cd7"  width="400" height="300"/> |<img src="https://github.com/user-attachments/assets/3d21f106-e925-4a62-b9fe-6a389fd37dd8"  width="600" height="400"/>|
 
-### 🏢 TO-BE
-![변환 후 아키텍처](https://github.com/user-attachments/assets/3d21f106-e925-4a62-b9fe-6a389fd37dd8)
+
 
 ## 🔄️전환 방법
 ### 📌 레거시 프로젝트 분석
