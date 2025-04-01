@@ -16,11 +16,19 @@ React, 모로리식 방식의 Spring Boot, Django 시스템에 Spring Cloud를 �
 ## 🔄️전환 방법
 ### 📌 레거시 프로젝트 분석
 
+
+<img src="https://github.com/user-attachments/assets/ed6d6940-1069-498f-9e02-aa15acc223e3"  width="600" height="400"/> | <img src="https://github.com/user-attachments/assets/014b33ba-d254-4edf-986e-c0fea8c47041"  width="600" height="400"/>
+---|---|
+
 1️⃣ 데이터 ERD 및 기능 명세서를 바탕으로 기존 프로그램 분석 <br>
 2️⃣ 마이크로서비스 전환 대상 서비스 식별 및 분리 &rarr; ( User 서비스, Coin 서비스 ) <br>
 
+
 ---
 ### 🛠️ Jenkins 기반의 CI/CD 적용
+
+<img src="https://github.com/user-attachments/assets/0e1bd1bb-0ff5-477c-b76d-a031947f97e0"  width="800" height="300"/>
+
 🔐 보안 관리
 * 민감 정보: Jenkins Credentials 사용
 * 환경 변수: Environment Variables로 관리
