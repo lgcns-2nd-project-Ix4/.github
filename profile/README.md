@@ -49,50 +49,19 @@ React, 모로리식 방식의 Spring Boot, Django 시스템에 Spring Cloud를 �
 ---
 
 ### ☁️ 클라우드 아키텍처 구성
-💻 EC2
+💻 EC2|💻 EC2 (Spring Cloud 인프라)|
+---|---|
+🛠️ Jenkins (CI/CD 자동화)|🔍 Eureka (서비스 디스커버리) <br> ⚙️ Config Server (설정 중앙 관리)<br>🚪 Gateway Server (API Gateway 및 로드 밸런싱)<br>📩 RabbitMQ (비동기 메시지 큐)|
 
-* 🛠️ Jenkins (CI/CD 자동화)
-
-💻 EC2 (Spring Cloud 인프라)
-
-* 🔍 Eureka (서비스 디스커버리)
-
-* ⚙️ Config Server (설정 중앙 관리)
-
-* 🚪 Gateway Server (API Gateway 및 로드 밸런싱)
-
-* 📩 RabbitMQ (비동기 메시지 큐)
-
-📦 ECS (Docker 기반 서비스 배포)
-
-* 🏦 Coin-Service (Spring Boot)
-
-* 👤 User-Service (Spring Boot)
-
-* 🐍 Django (백엔드 서비스)
-
-📂 ECR (Docker 컨테이너 이미지 저장소)
-
-🖥️ React 배포
-
-* 🗂️ S3 (정적 웹 호스팅)
-
-* ⚡ CloudFront (CDN 기반 속도 최적화 및 캐싱)
-
+📦 ECS (Docker 기반 서비스 배포)|🗂️ S3 (정적 웹 호스팅)<br>⚡ CloudFront (CDN 기반 속도 최적화 및 캐싱)|📂 ECR (Docker 컨테이너 이미지 저장소)|
+---|---|---|
+🏦 Coin-Service (Spring Boot)<br>👤 User-Service (Spring Boot)<br>🐍 Django (백엔드 서비스)|🖥️ React 배포|🫙Django, Spring 이미지 저장|
 ---
 
-### 🌿 Spring Cloud 적용용 
-🚀 Spring Cloud Eureka <br>
-* 서비스 등록, 등록된 서비스의 조회
-* 분산 투명성 제공
-
-🚪 Spring Cloud Gateway <br>
-* 단일 진입지점, 로드 밸런싱 제공
-* 분산 투명성 제공
-
-📜 Spring Cloud Config <br>
-* Git private Repository에서 설정파일 관리
-* Git webhook과 연동한 Cloud Bus refresh
+### 🌿 Spring Cloud 적용
+🚀 Spring Cloud Eureka|🚪 Spring Cloud Gateway|📜 Spring Cloud Config|
+---|---|---|
+서비스 등록<br>등록된 서비스의 조회<br>분산 투명성 제공|단일 진입지점<br>부하 분산<br>분산 투명성|Git private Repository에서 설정파일 관리<br>Git webhook과 연동한 Cloud Bus refresh|
 
 ## 👩‍💻 팀원
 <table>
